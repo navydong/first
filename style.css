@@ -1,0 +1,193 @@
+/* css reset css初始化代码 */
+body {margin:0; padding:0; font:12px/1.5 "微软雅黑",\5b8b\4f53,Arial,sans-serif; color: #3b3b3b;}
+div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,blockquote,p{padding:0; margin:0;}
+table,td,tr,th{font-size:12px;}
+ol,ul {list-style:none;}
+li{list-style-type:none;}
+img{vertical-align:top;border:0;}
+h1,h2,h3,h4,h5,h6{font-size:inherit; font-weight:normal;}
+address,cite,code,em,th,i{font-weight:normal; font-style:normal;}
+.clearfix{*zoom:1;}
+.clearfix:after{display:block; overflow:hidden; clear:both; height:0; visibility:hidden; content:".";}
+a {color:#252525; text-decoration:none;}
+a:visited {text-decoration:none;}
+a:hover {color:#ba2636;text-decoration:underline;}
+a:active {color:#ba2636;}
+
+
+.top {
+	height: 39px;
+	background-color: #333333;
+}
+.w {
+	width: 1226px;
+	margin:0 auto;
+}
+.top-content { 
+	height: 39px;
+	line-height: 39px;
+}
+.top-content li {
+	float:left;
+}
+.top-content li a {
+	color:#B0B0B0;
+	text-decoration:none;
+	font-size:12px;
+	padding:0 8px;
+	border-right: 1px solid #40403B;
+}
+
+.nav {
+	height: 100px;
+}
+.logo {
+	height: 55px;
+	width: 55px;
+	background: url('images/logo.png') no-repeat;
+	float:left;
+	margin-top: 22px;
+	margin-right:20px;
+}
+.pic {
+	float:left;
+	margin-top:22px;
+	margin-right:35px;
+}
+.nav-content {
+	float:left;
+}
+.nav-content li {
+	float:left;
+	line-height: 100px;
+}
+.nav-content a {
+	text-decoration:none;
+	font-size:16px;
+	margin:0 13px;
+}
+
+.banner {
+	height: 460px;
+	background: url('images/banner.png') no-repeat center right;
+
+}
+.subnav {
+	width: 234px;
+	height: 425px;
+	background-color: #2C505F;
+	border-left: 1px solid #6DC9EE; 
+	padding-top:35px;
+}
+.subnav li {
+	height: 42px;
+	margin-left:30px;
+	background: url('images/arrow.png') no-repeat right top;
+	margin-right:24px;
+}
+.subnav li a {
+	text-decoration:none;
+	color:#fff;
+	font-size:14px;
+}
+.banner-btm {
+	margin-top: 14px;
+	height: 169px;
+	margin-bottom:67px;
+}
+.banner-btm li {
+	height: 169px;
+	float:left;
+	margin-right:15px;
+}
+
+.main {
+	height: 800px;
+	background-color: #F5F5F5;
+	padding-top:77px;
+}
+.main-content>h4 {
+	font-size:24px;
+	font-family:"宋体";
+	color:#000;
+	float:left;
+	margin-bottom:20px;
+}
+.main-content>p {
+	float:right;
+}
+.fixed {
+	clear:both;
+}
+.main-content .left {
+	float:left;
+}
+.main-content .right {
+	float:left;
+}
+.right li {
+	float:left;
+	width: 235px;
+	height: 270px;
+	background-color: #fff;
+	margin-left:13px;
+	margin-bottom:13px;
+	text-align:center;
+	padding-top:30px;
+}
+.right h4 {
+	font-size:14px;
+	color:#000;
+	line-height:22px;
+	margin-top: 35px;
+}
+.right p {
+	font-size:14px;
+	color:#B0B0B0;
+	line-height:30px;
+}
+.right i {
+	color:#FF6700;
+}
+.foot {
+	height: 211px;
+	padding-top:60px;
+	background-color: #fff;
+}
+.foot dl {
+	float:left;
+	margin-right:103px;
+}
+.foot dt {
+	font-size:16px;
+	margin-bottom: 31px;
+}
+.foot dd {
+	color:#757598;
+	line-height: 28px;
+}
+.foot .last {
+	border-right: 1px solid #ECECEC;
+	padding-right:117px;
+	margin-right:30px;
+}
+.tel {
+	padding-left: 60px;
+	margin-left:60px;
+}
+.tel h4 {
+	color:#FF7D8E;
+	font-size:22px;
+}
+.foot-btm {
+	height: 156px;
+	padding-top: 28px;
+	background: #FAFAFA url('images/slogan2016.png') no-repeat 50% 140px;
+
+}
+.foot-btm .content {
+	padding-top:20px;
+}
+.content span {
+	color:#B0B0B0;
+}

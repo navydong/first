@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #box {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: absolute;
+            left: 400px;
+        }
+    </style>
+</head>
+<body>
+<button id="btn">按钮</button>
+<div id="box"></div>
+<script>
+    btn.onclick = function () {
+        animate(box, {"left": 0}, function () {
+            animate(box, {"top": 200}, function () {
+                animate(box, {"opacity": 0.8, "left": 200})
+            })
+        });
+    }
+
+
+    //缓动函数
+    //让任意对象 的任意属性  以动画形式 移动到 指定值
+    //升级函数 回调函数  透明度和层级
+    //function animate(object, attribtue, target) {
+    //function animate(object, json) { // json{attribute:target}{k:json[k]}
+    function animate(object, json, fn) {
+        clearInterval(object.timer);
+        object.timer = setInterval(function () {
+            var flag = true;
+            for (var k in json) {
+                if (k == "opacity") {
+                    var leader = parseInt(getStyle(object, k)) || 0;
+                    var target = json[k] * 100;
+                    var step = (target - leader) / 10;
+                    step = step > 0 ? Math.ceil(step) : Math.floor(step);
+                    leader = leader + step;
+                    //object.style.left = leader + "px";
+                    object.style[k] = leader / 100;
+                } else if (k == "zIndex") {
+                    object.style.zIndex = json[k];
+                } else {
+                    //var leader = object.offsetLeft;//获取像素的就进取整的
+                    var leader = parseInt(getStyle(object, k));
+                    var target = json[k];
+                    var step = (target - leader) / 10;
+                    step = step > 0 ? Math.ceil(step) : Math.floor(step);
+                    leader = leader + step;
+                    //object.style.left = leader + "px";
+                    object.style[k] = leader + "px";
+                    if (leader !== target) {
+                        flag = false;
+                    }
+                }
+            }
+            if (flag) {
+                clearInterval(object.timer);
+                if (fn) {
+                    fn()
+                }
+            }
+        }, 15)
+    }
+
+    //获取对象计算后（computed）的属性
+    function getStyle(object, attribute) {
+        if (window.getComputedStyle) {
+            return window.getComputedStyle(object, null)[attribute];
+        } else {
+            return object.currentStyle[attribute];
+        }
+    }
+</script>
+
+</body>
+</html>
